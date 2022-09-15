@@ -19,6 +19,7 @@ export default function CompControlado() {
             <label>
                 Nome:
                 <input type="text" value={nome} onChange={leNome}/>
+                <button onClick={exibeNome}>Exibe</button>
             </label>
         </div>
     )
