@@ -65,7 +65,7 @@ namespace ProjetoEscola_API.Controllers
             return BadRequest();
         }
 
-        [HttpPut("{AlunoRA}")]
+        [HttpPut("{AlunoId}")]
         public async Task<ActionResult> put(int AlunoId, Aluno dadosAlunosAlt)
         {
              try
@@ -89,7 +89,7 @@ namespace ProjetoEscola_API.Controllers
             }
         }
 
-        [HttpDelete("AlunoId")]
+        [HttpDelete("{AlunoId}")]
         public async Task<ActionResult> delete(int AlunoId)
         {
             try

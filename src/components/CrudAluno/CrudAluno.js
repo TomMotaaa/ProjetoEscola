@@ -31,7 +31,7 @@ export default class CrudAluno extends Component {
         const metodo = aluno.id ? 'put' : 'post';
         const url = aluno.id ? `${urlAPI}/${aluno.id}` : urlAPI;
 
-        axios[metodo](urlAPI, aluno)
+        axios[metodo](url, aluno)
             .then(resp => {
                 const lista = this.getListaAtualizada(resp.data)
                 this.setState({ aluno: initialState.aluno, lista })
@@ -44,28 +44,37 @@ export default class CrudAluno extends Component {
         return lista;
     }
 
-    atualizaCampo(event) {
+    atualizaCampo(evento) {
         //clonar usuário a partir do state, para não alterar o state diretamente
         const aluno = { ...this.state.aluno};
         // usar o atributo NAME do imput identificar o campo a ser atualizado
-        aluno[event.target.name] = event.target.value;
+        aluno[evento.target.name] = evento.target.value;
         //atualizar o state
         this.setState({aluno});
     }
 
     carregar(aluno) {
         this.setState({ aluno })
+        const url = urlAPI + "/" + aluno.id;
+        if (window.confirm("Confirma edição do aluno: " + aluno.ra)) {
+            console.log("entrou no confirm");
+            axios['PUT'](url, aluno).then(resp => {
+                const lista = this.getListaAtualizada(aluno, false);
+                this.setState({ aluno: initialState.aluno, lista });
+            });
+        }
+        this.atualizaCampo(aluno);
     }
 
     remover(aluno) {
         const url = urlAPI + "/" + aluno.id;
         if (window.confirm("Confirma remoção do aluno: " + aluno.ra)) {
-            console.log("entrou no confirm");
+            console.log("entrou no confirme da tela")
 
             axios['delete'](url, aluno)
                 .then(resp => {
                     const lista = this.getListaAtualizada(aluno, false)
-                    this.setState({ aluno: initialState.aluno, lista})
+                    this.setState({ aluno: initialState.aluno, lista })
                 })
         }
     }
