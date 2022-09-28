@@ -1,0 +1,124 @@
+.tituloListagem {
+    margin-left: 20px;
+}
+
+.listaCursos {
+    margin-left: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cabecTabela {
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+.tabTituloCodCurso {
+    width: 10px;
+}
+
+.tabTituloNome {
+    width: 400px;
+}
+
+input[type=text] {
+    display: inline-block;
+    width: 20%;
+    padding: 12px;
+    margin: 8px 0;
+}
+
+input[type=number] {
+    padding: 12px;
+    width: 75px;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inclui-container {
+    margin: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 30px;
+}
+
+.btnSalvar {
+    background-color: lightblue;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 5px 5px 30px;
+}
+
+.btnCancelar {
+    background-color: gainsboro;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+label {
+    padding: 10px;
+}
+
+.tituloCadastro {
+    margin-left: 30px;
+}
+
+.btnSalvar {
+    color: white;
+    background-color: rgb(2, 177, 26);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px 5px 5px 30px;
+}
+
+.btnCancelar {
+    color: white;
+    background-color: rgb(119, 119, 119);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+label {
+    padding: 10px;
+}
+
+.btn-alterar{
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(0, 77, 231);
+    color: white;
+    transition: 0.3s ease-in;
+    animation: rotate 2s linear;
+}
+
+.btn-remover{
+    padding: 10px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+.val-center{
+    text-align: center;
+}

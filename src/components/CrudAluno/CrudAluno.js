@@ -150,13 +150,13 @@ export default class CrudAluno extends Component {
                                 <td>{aluno.nome}</td>
                                 <td>{aluno.codCurso}</td>
                                 <td>
-                                    <button onClick={() => this.carregar(aluno)}>
-                                        Altera
+                                    <button className="btn-alterar" onClick={() => this.carregar(aluno)}>
+                                        Alterar
                                     </button>
                                 </td>
                                 <td>
-                                    <button onClick={() => this.remover(aluno)}>
-                                        Remove
+                                    <button className="btn-remover" onClick={() => this.remover(aluno)}>
+                                        Remover
                                     </button>
                                 </td>
                             </tr>

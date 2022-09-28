@@ -46,7 +46,7 @@ input[type=number] {
 }
 
 .btnSalvar {
-    background-color: lightblue;
+    background-color: rgb(2, 177, 26);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -55,7 +55,7 @@ input[type=number] {
 }
 
 .btnCancelar {
-    background-color: gainsboro;
+    background-color: rgb(255, 7, 7);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -81,7 +81,7 @@ label {
 }
 
 .btnCancelar {
-    background-color: gainsboro;
+    background-color: rgb(119, 119, 119);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -91,4 +91,24 @@ label {
 
 label {
     padding: 10px;
+}
+
+.btn-alterar{
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(0, 77, 231);
+    color: white;
+    transition: 0.3s ease-in;
+    animation: rotate 2s linear;
+}
+
+.btn-remover{
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
 }
