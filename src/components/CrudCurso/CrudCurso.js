@@ -76,7 +76,7 @@ export default function Curso() {
                     <label> Código do Curso: </label>
                     <input
                         type="number"
-                        id="ra"
+                        id="codCurso"
                         placeholder="Codigo"
                         className="form-input"
                         name="codCurso"
@@ -132,7 +132,7 @@ export default function Curso() {
                     </thead>
 
                     <tbody>
-                        {lista.map((curso) => (
+                        {lista.map(
                             (curso) =>
                                 <tr key={curso.id}>
                                     <td className="val-center">{curso.nomeCurso}</td>
@@ -153,7 +153,7 @@ export default function Curso() {
                                         </button>
                                     </td>
                                 </tr>
-                        ))}
+                        )}
                     </tbody>
                 </table>
             </div>
