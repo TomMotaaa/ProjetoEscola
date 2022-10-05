@@ -20,11 +20,20 @@ th, td {
 
 .tabTituloRa {
     width: 100px;
+    text-align: center;
+    background-color:darkmagenta;
 }
 
 .tabTituloNome {
     width: 400px;
     text-align: center;
+    background-color:darkmagenta;
+}
+
+.tabTituloNumCurso {
+    width: 100px;
+    text-align: center;
+    background-color:darkmagenta;
 }
 
 input[type=text] {
@@ -112,4 +121,8 @@ label {
     border-radius: 4px;
     background-color: red;
     color: white;
+}
+
+.val-center{
+    text-align: center;
 }

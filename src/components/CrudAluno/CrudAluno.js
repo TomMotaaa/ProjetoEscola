@@ -136,9 +136,9 @@ export default class CrudAluno extends Component {
                 <table className="listaAlunos" id="tblListaAlunos">
                     <thead>
                         <tr className="cabecTabela">
-                            <th className="tabTituloRa">Ra</th>
+                            <th className="tabTituloRa">RA</th>
                             <th className="tabTituloNome">Nome</th>
-                            <th className="tabTituloCurso">Curso</th>
+                            <th className="tabTituloNumCurso">Curso</th>
                         </tr>
                     </thead>
 
@@ -146,9 +146,9 @@ export default class CrudAluno extends Component {
                         {this.state.lista.map(
                             (aluno) =>
                             <tr key={aluno.id}>
-                                <td>{aluno.ra}</td>
-                                <td>{aluno.nome}</td>
-                                <td>{aluno.codCurso}</td>
+                                <td className="val-center">{aluno.ra}</td>
+                                <td className="val-center">{aluno.nome}</td>
+                                <td className="val-center">{aluno.codCurso}</td>
                                 <td>
                                     <button className="btn-alterar" onClick={() => this.carregar(aluno)}>
                                         Alterar

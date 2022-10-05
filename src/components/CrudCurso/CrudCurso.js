@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Main from "../template/Main";
 import axios from "axios";
 
-const Cursos = () => {
+export default function Cursos() {
     const title = "Cadastro de Cursos"
     const urlAPI = 'http://localhost:5014/api/curso';
     const [data, setData] = useState([])
@@ -14,7 +14,7 @@ const Cursos = () => {
         nomeCurso: '',
         periodo: '',
     })
-    const [cursoData, setCursoData] = useState({
+    const [cursoData, setCurso] = useState({
         id: 0,
         codCurso: '',
         nomeCurso: '',
@@ -31,7 +31,7 @@ const Cursos = () => {
 
     const atualizaCampo = evento => {
         const { name, value } = evento.target
-        setCursoData({
+        setCurso({
             ...cursoData,
             [name]: value
         })
@@ -58,7 +58,7 @@ const Cursos = () => {
         })
     }
 
-    const atualizarCurso = (cursoData) => setCursoData(cursoData)
+    const atualizarCurso = (cursoData) => setCurso(cursoData)
 
     const removerCurso = (cursoData) => {
         const url = urlAPI + '/' + cursoData.id;
@@ -67,7 +67,7 @@ const Cursos = () => {
         axios['delete'](url, cursoData)
             .then((_resp) => {
                 const lista = getListaAtualizada(cursoData, false)
-                setCursoData({ dadosCurso: cursoData.dadosCurso, lista })
+                setCurso({ dadosCurso: cursoData.dadosCurso, lista })
             })
     }
 
@@ -130,8 +130,8 @@ const Cursos = () => {
                 <table className="listaCursos" id="tblListaCursos">
                     <thead className='cabecTabela'>
                         <tr className="cabecTabela">
-                            <th className='tabTituloNome'>Código </th>
-                            <th className='tabTituloCodCurso'>Curso</th>
+                            <th className='tabTituloCurso'>Curso</th>
+                            <th className='tabTituloCodCurso'>Código</th>
                             <th className='tabTituloPeriodo'>Período</th>
                         </tr>
                     </thead>
@@ -140,7 +140,7 @@ const Cursos = () => {
                         {data.map(
                             (curso) =>
                                 <tr key={curso.id}>
-                                    <td className="val-center">{curso.nomeCurso}</td>
+                                    <td>{curso.nomeCurso}</td>
                                     <td>{curso.codCurso}</td>
                                     <td className="val-center">{curso.periodo}</td>
                                     <td>
@@ -166,4 +166,3 @@ const Cursos = () => {
     )
 }
 
-export default Cursos

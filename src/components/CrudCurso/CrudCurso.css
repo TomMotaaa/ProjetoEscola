@@ -21,10 +21,18 @@ td {
 
 .tabTituloCodCurso {
     width: 10px;
+    background-color:rgb(252, 59, 0);
 }
 
-.tabTituloNome {
+.tabTituloPeriodo {
+    width: 10px;
+    background-color:rgb(252, 59, 0);
+}
+
+.tabTituloCurso {
     width: 400px;
+    background-color:rgb(252, 59, 0);
+    text-align: center;
 }
 
 input[type=text] {
