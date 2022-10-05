@@ -36,6 +36,15 @@ th, td {
     background-color:darkmagenta;
 }
 
+select{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 12px;
+}
+
+option{
+    font-size: 12px;
+}
+
 input[type=text] {
     display: inline-block;
     width: 20%;
