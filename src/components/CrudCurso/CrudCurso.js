@@ -21,11 +21,17 @@ export default function Cursos() {
         periodo: '',
     })
 
+    const limpaCurso = { id: 0, codCurso: '', nomeCurso: '', periodo: '', }
+
     const InfoAPI = async () => {
         await axios(urlAPI)
             .then(resp => {
                 setData(resp.data)
             })
+    }
+
+    const limpar = () => {
+        setCurso(limpaCurso)
     }
 
 
@@ -53,7 +59,7 @@ export default function Cursos() {
         axios[metodo](url, dadosCurso)
         .then(resp => {
             let lista = getListaAtualizada(resp.data)
-            cursoData({ dadosCurso: cursoData.dadosCurso, lista})
+            cursoData(cursoData.limpaCurso)
             setLista(lista)
         })
     }
@@ -120,7 +126,7 @@ export default function Cursos() {
                     Salvar
                 </button>
                 <button className="btnCancelar"
-                //onClick={e => this.limpar(e)} 
+                    onClick={e => limpar(e)}
                 >
                     Cancelar
                 </button>
