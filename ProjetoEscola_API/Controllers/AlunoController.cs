@@ -22,9 +22,15 @@ namespace ProjetoEscola_API.Controllers
         [HttpGet]
         public ActionResult<List<Aluno>> GetAll()
         {
-            return _context.Aluno.ToList();
+            if (_context.Aluno is not null) {
+                return _context.Aluno.ToList();
+            }
+            else {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, 
+                "Falha no acesso ao banco de dados.");
+            }
         }
-
+        [ActionName("AlunoId")]
         [HttpGet("{AlunoId}")]
         public ActionResult<List<Aluno>> Get(int AlunoId)
         {
@@ -38,6 +44,25 @@ namespace ProjetoEscola_API.Controllers
                 return Ok(result);
             }
             catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, 
+                "Falha no acesso ao banco de dados.");
+            }
+        }
+
+        [ActionName("AlunoNome")]
+        [HttpGet("{AlunoNome}")]
+        public ActionResult<List<Aluno>> GetAlunoNome(string AlunoNome)
+        {
+            if (_context.Aluno is not null) {
+                var result = _context.Aluno.Where(a => a.nome == AlunoNome);
+                if (result == null)
+                {
+                    return NotFound();
+                }
+                return Ok(result);
+            }
+            else
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, 
                 "Falha no acesso ao banco de dados.");
