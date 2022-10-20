@@ -68,7 +68,7 @@ select .selectCarometro option{
 
     align-self: normal;
     font-family: "Baloo Paaji 2", cursive;
-    background-color: #1e2426;
+    background-color: #470af0;
     max-width: 15%;
 
     border-radius: 0.25rem;
@@ -94,16 +94,16 @@ select .selectCarometro option{
     max-height: 160px;
     width: 160px;
     border-radius: 50%;
-    border: 5px solid #213322;
+    border: 5px solid #acf2f5;
     margin-top: 20px;
     margin-bottom: 10px;
-    box-shadow: 0 7px 25px rgb(92, 230, 57);
+    box-shadow: 0 7px 25px rgb(66, 112, 55);
 }
 
 .draw-border {
 
   display: flex;
-    box-shadow: inset 0 0 0 3px #58d1b7;
+    box-shadow: inset 0 0 0 3px #76fdf6;
     color: #ffffff;
     -webkit-transition: color 0.25s 0.0833333333s;
     transition: color 0.25s 0.0833333333s;
@@ -134,7 +134,7 @@ select .selectCarometro option{
 }
 
 .draw-border:hover {
-    color: rgb(241, 213, 50);
+    color: rgb(253, 253, 253);
 }
 
 .draw-border:hover .card__image {
@@ -143,7 +143,7 @@ select .selectCarometro option{
 
 .draw-border:hover::before,
 .draw-border:hover::after {
-    border-color: gold;
+    border-color: rgb(0, 119, 255);
     -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
     transition: border-color 0s, width 0.25s, height 0.25s;
     width: 100%;

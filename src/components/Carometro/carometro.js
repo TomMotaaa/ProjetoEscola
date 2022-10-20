@@ -76,7 +76,8 @@ export default function Carometro(props) {
                 <div key={aluno.id} className="card draw-border">
                     <img  className="card-imagem" src={`https://avatars.dicebear.com/api/big-smile/${geradorDeLetras()}.svg`} alt={`Avatar de `+ aluno.nome}/>
                     <span className="card-titulo">{aluno.nome}</span>
-                    <span className="card-descricao">RA: {aluno.ra} | Curso: {aluno.codCurso}</span>
+                    <span className="card-descricao">RA: {aluno.ra}</span>
+                    <span className="card-descricao"> Curso: {aluno.codCurso} </span>
                 </div>
             )) : null}
         </div>
