@@ -58,7 +58,7 @@ export default function Carometro(props) {
             <div className="select-container">
                 <label> Curso: </label>
                 <select className="selectCarometro" value={cursos.codCurso}  onChange={e => { atualizarAlunos(e)}} required>
-                    <option disabled={true} key="" value="">  -- Escolha um curso -- </option>
+                    <option disabled={true} key="" value=""> Escolha um curso: </option>
                     {listaCursos.map( (cursos) =>
                             <option  key={cursos.id} name="codCurso" value={cursos.codCurso}>
                                 { cursos.codCurso } - { cursos.nomeCurso } : { cursos.periodo }
@@ -74,7 +74,7 @@ export default function Carometro(props) {
             {Array.isArray(listaAlunos) && listaAlunos.length > 0 ?
             listaAlunos.map((aluno) => (
                 <div key={aluno.id} className="card draw-border">
-                    <img  className="card-imagem" src={`https://avatars.dicebear.com/api/big-smile/${geradorDeLetras()}.svg`} alt={`Avatar de `+ aluno.nome}/>
+                    <img  className="card-imagem" src={`https://avatars.dicebear.com/api/big-smile/${geradorDeLetras()}.svg`} alt={aluno.nome}/>
                     <span className="card-titulo">{aluno.nome}</span>
                     <span className="card-descricao">RA: {aluno.ra}</span>
                     <span className="card-descricao"> Curso: {aluno.codCurso} </span>

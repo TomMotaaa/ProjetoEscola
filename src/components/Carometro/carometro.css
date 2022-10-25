@@ -29,7 +29,7 @@ div.carometro > main > div > div {
 }
 
 .selectCarometro{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Times New Roman', Times, serif;
   padding: 5px 15px 5px 10px;
 }
 
@@ -67,11 +67,11 @@ select .selectCarometro option{
     padding: 10px 20px;
 
     align-self: normal;
-    font-family: "Baloo Paaji 2", cursive;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #470af0;
     max-width: 15%;
 
-    border-radius: 0.25rem;
+    border-radius: 1rem;
     overflow: hidden;
 }
 
