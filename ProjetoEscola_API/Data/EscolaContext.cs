@@ -6,12 +6,21 @@ namespace ProjetoEscola_API.Data
 {
     public class EscolaContext : DbContext
     {
-        public EscolaContext(DbContextOptions<EscolaContext> options) : base (options)
-        {
+        protected readonly IConfiguration Configuration;
 
+        public EscolaContext(IConfiguration configuration)
+        {
+            Configuration = configuration;
         }
 
-        public DbSet<Aluno> Aluno {get; set;}
-        public DbSet<Curso> Curso {get; set;}
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            // connect to sql server with connection string from app settings
+            options.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"));
+        }
+
+        public DbSet<Aluno>? Aluno {get; set;}
+        public DbSet<Curso>? Curso {get; set;}
+        public DbSet<User>? Usuario {get; set;}
     }
 }

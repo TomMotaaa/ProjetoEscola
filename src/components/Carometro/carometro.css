@@ -18,19 +18,20 @@ div.carometro > main > div > div {
 
 .select-container {
   color: white;
-  margin: 20px 20px 20px 0px;
-  border-radius: 20px;
+  margin: 20px;
+  border-radius: 5px;
   background-color: #470af0;
-  padding: 8px 0px 8px 6px;
+  padding: 10px;
 
-  width: 25%;
+  width: 92%;
   border: 1.5px solid #bddff7;
   border-collapse: collapse;
 }
 
 .selectCarometro{
   font-family:'Times New Roman', Times, serif;
-  padding: 5px 15px 5px 10px;
+  padding: 10px 15px 10px 10px;
+  font-size: 14px;
 }
 
 select .selectCarometro option{
@@ -158,4 +159,10 @@ select .selectCarometro option{
 .draw-border:hover::after {
     -webkit-transition-delay: 0s, 0.25s, 0s;
     transition-delay: 0s, 0.25s, 0s;
+}
+
+label {
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
